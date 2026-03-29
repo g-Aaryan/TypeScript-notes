@@ -1,0 +1,54 @@
+// TS = JS + STATIC TYPING 
+// Compile time check types before running the code 
+let id : number  = 10; // explicit type definition 
+let firstName = "Aaryan" // automatically infer the type
+
+//firstName = 12; thorws error 
+
+// when js cant infer the type
+
+let something;
+something = 42;
+something = "Gupta" // type is infered as any 
+                    // by pass the ts feature 
+
+// union of types 
+let nid : string | number = 12;
+nid = "12";
+
+let p1 :{name:string,age:number,email?:string}= {
+    name : "Aaryan",
+    age : 20
+}
+
+p1.email = "Aaryan@gmail.com" // optional property 
+console.log(p1)
+
+// arrays 
+
+let ids : number[] = [1,2,3,4]
+let hetero : any[] = [1,2,false,"Gupta"]
+
+// typed tuple
+let data : [number,string,boolean] = [12,"Aaryan",false]
+
+// interfaces 
+interface Product {
+    name : string;
+    price : number;
+    brand : string
+
+    display() : void;
+}
+
+let p2 : Product = {
+    name: "Iphone",
+    price: 100000,
+    brand: "Apple",
+    display: () => {
+        console.log("display");
+    } 
+}
+
+console.log(p1);
+
